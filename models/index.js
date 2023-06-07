@@ -13,5 +13,6 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize; 
 
 db.users = require('./users.js')(sequelize,Sequelize);
+db.merkle = require('./merkle.js')(sequelize,Sequelize);
 
 module.exports = db;

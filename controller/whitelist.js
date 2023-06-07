@@ -50,5 +50,4 @@ async function deleteWhitelist(id) {
     return user;
 }
 
-
 module.exports = { readWhitelist, addWhitelist, putWhitelist, deleteWhitelist };
