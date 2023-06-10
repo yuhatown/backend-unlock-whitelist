@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { readWhitelist, addWhitelist, putWhitelist, deleteWhitelist } = require('../controller/whitelist');
+const { readWhitelist, addWhitelist, setWhitelist, deleteWhitelist } = require('../controller/whitelist');
 
 
 router.get('/', function (req, res, next) {
@@ -21,7 +21,7 @@ router.post('/add', function (req, res, next) {
 router.put('/', function (req, res, next) {
   const { id, name, address } = req.body;
 
-  putWhitelist(id, name, address);
+  setWhitelist(id, name, address);
 
   res.send('ok');
 });

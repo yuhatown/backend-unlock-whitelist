@@ -24,7 +24,7 @@ async function addWhitelist(name, address) {
 }
 
 
-async function putWhitelist(id, name, address) {
+async function setWhitelist(id, name, address) {
     const user = Users.update({ name, address }, {
         where: {
             id
@@ -50,4 +50,4 @@ async function deleteWhitelist(id) {
     return user;
 }
 
-module.exports = { readWhitelist, addWhitelist, putWhitelist, deleteWhitelist };
+module.exports = { readWhitelist, addWhitelist, setWhitelist, deleteWhitelist };
